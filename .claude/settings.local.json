@@ -10,7 +10,8 @@
       "Bash(true:*)",
       "Bash(cd E:/Shevait_personal/assignments_code/fintech-assessment/client && npm install recharts 2>&1)",
       "Bash(cd E:/Shevait_personal/assignments_code/fintech-assessment/client && npx next build 2>&1)",
-      "Bash(find E:\\\\Shevait_personal\\\\assignments_code\\\\fintech-assessment\\\\client\\\\app:*)"
+      "Bash(find E:\\\\Shevait_personal\\\\assignments_code\\\\fintech-assessment\\\\client\\\\app:*)",
+      "Bash(head:*)"
     ]
   }
 }
