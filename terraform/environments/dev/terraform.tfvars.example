@@ -1,0 +1,7 @@
+aws_region       = "ap-south-1"
+project_name     = "fintech-server"
+instance_type    = "t2.micro"
+key_pair_name    = "your-key-pair-name"
+server_port      = 8080
+allowed_ssh_cidr = "0.0.0.0/0"   # Dev: open SSH (restrict in prod)
+ebs_volume_size  = 20
