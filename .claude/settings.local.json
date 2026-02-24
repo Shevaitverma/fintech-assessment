@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cd:*)",
+      "Bash(cd /e/Shevait_personal/assignments_code/fintech-assessment/server && npx tsc --noEmit 2>&1)",
+      "Bash(cd /e/Shevait_personal/assignments_code/fintech-assessment/server && npm outdated 2>&1)",
+      "Bash(node:*)",
+      "Bash(npm view:*)"
+    ]
+  }
+}
