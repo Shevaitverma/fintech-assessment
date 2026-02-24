@@ -1,7 +1,7 @@
 import { Types } from "mongoose";
-import Investment from "../models/Investment";
-import RoiHistory from "../models/RoiHistory";
-import ReferralIncome from "../models/ReferralIncome";
+import Investment, { IInvestment } from "../models/Investment";
+import RoiHistory, { IRoiHistory } from "../models/RoiHistory";
+import ReferralIncome, { IReferralIncome } from "../models/ReferralIncome";
 import User from "../models/User";
 
 interface LevelIncomeEntry {
@@ -23,10 +23,10 @@ interface DashboardSummary {
 
 export interface DashboardData {
   summary: DashboardSummary;
-  investments: Record<string, unknown>[];
+  investments: (IInvestment & { __v: number })[];
   levelIncome: LevelIncomeEntry[];
-  recentRoi: Record<string, unknown>[];
-  recentReferrals: Record<string, unknown>[];
+  recentRoi: (IRoiHistory & { __v: number })[];
+  recentReferrals: (IReferralIncome & { __v: number })[];
 }
 
 export const getUserDashboard = async (
