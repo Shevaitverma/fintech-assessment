@@ -38,8 +38,8 @@ export default function DashboardPage() {
       ]);
       setDashboard(dashRes.data);
       setReferralTree(treeRes.data);
-    } catch (err: any) {
-      setError(err.message || "Failed to load dashboard data");
+    } catch (err: unknown) {
+      setError(err instanceof Error ? err.message : "Failed to load dashboard data");
     } finally {
       setLoading(false);
     }

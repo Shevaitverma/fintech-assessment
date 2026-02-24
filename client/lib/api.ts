@@ -74,7 +74,7 @@ class ApiClient {
   async createInvestment(
     amount: number,
     plan: string
-  ): Promise<ApiResponse<{ investment: any }>> {
+  ): Promise<ApiResponse<{ investment: Record<string, unknown> }>> {
     return this.request("/investments", {
       method: "POST",
       body: JSON.stringify({ amount, plan }),

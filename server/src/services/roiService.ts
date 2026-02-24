@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import Investment, { IInvestment } from "../models/Investment";
+import Investment from "../models/Investment";
 import RoiHistory from "../models/RoiHistory";
 import ReferralIncome from "../models/ReferralIncome";
 import LevelSetting, { DEFAULT_LEVEL_CONFIG } from "../models/LevelSetting";
@@ -176,8 +176,8 @@ export const processDailyRoi = async (): Promise<DailyRoiResult> => {
         levels
       );
       result.totalLevelIncomeDistributed += levelIncomeDistributed;
-    } catch (error: any) {
-      const errMsg = `Failed to process ROI for investment ${investment._id}: ${error.message}`;
+    } catch (error: unknown) {
+      const errMsg = `Failed to process ROI for investment ${investment._id}: ${error instanceof Error ? error.message : String(error)}`;
       logger.error(errMsg);
       result.errors.push(errMsg);
     }

@@ -1,5 +1,5 @@
 import { Types } from "mongoose";
-import Investment, { PLAN_DAILY_ROI, PlanType, PLAN_ENUM, IInvestment } from "../models/Investment";
+import Investment, { PLAN_DAILY_ROI, PlanType, PLAN_ENUM } from "../models/Investment";
 import ReferralIncome from "../models/ReferralIncome";
 import LevelSetting, { DEFAULT_LEVEL_CONFIG } from "../models/LevelSetting";
 import User from "../models/User";

@@ -23,10 +23,10 @@ interface DashboardSummary {
 
 export interface DashboardData {
   summary: DashboardSummary;
-  investments: any[];
+  investments: Record<string, unknown>[];
   levelIncome: LevelIncomeEntry[];
-  recentRoi: any[];
-  recentReferrals: any[];
+  recentRoi: Record<string, unknown>[];
+  recentReferrals: Record<string, unknown>[];
 }
 
 export const getUserDashboard = async (

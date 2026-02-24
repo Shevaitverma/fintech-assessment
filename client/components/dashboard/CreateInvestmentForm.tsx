@@ -36,8 +36,8 @@ export default function CreateInvestmentForm({ onSuccess }: CreateInvestmentForm
       setPlan("basic");
       setOpen(false);
       onSuccess();
-    } catch (err: any) {
-      setError(err.message || "Failed to create investment");
+    } catch (err: unknown) {
+      setError(err instanceof Error ? err.message : "Failed to create investment");
     } finally {
       setLoading(false);
     }
